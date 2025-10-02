@@ -1,45 +1,118 @@
-Overview
-========
+# YouTube ELT Pipeline – Projet V4
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+## 🎯 Contexte
+De nombreuses entreprises du secteur digital souhaitent automatiser l'analyse des performances de contenu YouTube pour optimiser leurs stratégies marketing et comprendre les tendances du marché.  
+Ce projet a pour objectif de concevoir un **pipeline ELT complet** permettant d’extraire, transformer, charger et valider les données YouTube automatiquement.
 
-Project Contents
-================
+## 👩‍💻 User Stories
+- **Data Engineer** : Orchestrer l'extraction quotidienne des données YouTube via des DAGs Airflow.
+- **Analyste de données** : Accéder aux données structurées dans PostgreSQL via pgAdmin, DBeaver ou Airflow.
+- **DevOps** : Déployer et monitorer le pipeline via Docker et Astro CLI.
+- **Data Quality Manager** : Valider automatiquement la qualité des données avec Soda Core.
+- **Développeur** : Lancer le pipeline localement et le déployer avec GitHub Actions.
+- **Business Analyst (bonus)** : Visualiser les données via un dashboard Streamlit.
 
-Your Astro project contains the following files and folders:
+## 🛠️ Technologies utilisées
+- **Python** : Scripts ETL et DAGs Airflow
+- **Apache Airflow & Astro CLI** : Orchestration et planification
+- **PostgreSQL** : Data Warehouse avec schémas `staging` et `core`
+- **Docker** : Containerisation
+- **Soda Core** : Validation qualité des données
+- **GitHub Actions** : CI/CD automatisé
+- **Bonus** : Streamlit pour dashboard et multi-chaînes YouTube
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
-    - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting started tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
-- Dockerfile: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. If you want to execute other commands or overrides at runtime, specify them here.
-- include: This folder contains any additional files that you want to include as part of your project. It is empty by default.
-- packages.txt: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- requirements.txt: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- plugins: Add custom or community plugins for your project to this file. It is empty by default.
-- airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+## ⚙️ Architecture du pipeline
+1. **DAG `produce_JSON`** :  
+   - Extraction des données YouTube (video_id, titre, date, durée, vues, likes, commentaires)  
+   - Gestion de la pagination et quotas API  
+   - Sauvegarde en JSON horodaté  
+   - Retry logic en cas d'erreurs
 
-Deploy Your Project Locally
-===========================
+2. **DAG `update_db`** :  
+   - Chargement des JSON dans le schéma `staging`  
+   - Transformation et nettoyage des données  
+   - Chargement en `core`  
+   - Gestion des doublons et historique
 
-Start Airflow on your local machine by running 'astro dev start'.
+3. **DAG `data_quality`** :  
+   - Validation automatique avec Soda Core  
+   - Tests de complétude, cohérence et format  
+   - Alertes en cas d’anomalies
 
-This command will spin up five Docker containers on your machine, each for a different Airflow component:
+## 📝 Installation & usage
+### Prérequis
+- Docker et Docker Compose
+- Astro CLI
+- Clé API YouTube v3
+- PostgreSQL
 
-- Postgres: Airflow's Metadata Database
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-- DAG Processor: The Airflow component responsible for parsing DAGs
-- API Server: The Airflow component responsible for serving the Airflow UI and API
-- Triggerer: The Airflow component responsible for triggering deferred tasks
+### Lancement du projet
+```bash
+# Cloner le dépôt
+git clone https://github.com/votre-utilisateur/youtube-elt-pipeline.git
+cd youtube-elt-pipeline
 
-When all five containers are ready the command will open the browser to the Airflow UI at http://localhost:8080/. You should also be able to access your Postgres Database at 'localhost:5432/postgres' with username 'postgres' and password 'postgres'.
+# Créer un fichier .env avec vos clés API
+cp .env.example .env
+# Éditer .env avec vos clés YouTube API
 
-Note: If you already have either of the above ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
+# Démarrer le projet Airflow avec Astro
+astro dev start
 
-Deploy Your Project to Astronomer
-=================================
+# Si le build échoue à cause de timeouts réseau, essayer:
+# 1. Attendre et relancer: astro dev start
+# 2. Ou installer les dépendances optionnelles après le démarrage:
+#    astro dev bash
+#    python /opt/airflow/scripts/install_optional_deps.py
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
+# Lancer les DAGs depuis l'UI Airflow
+```
 
-Contact
-=======
+### Résolution des problèmes de build
+Si vous rencontrez des timeouts lors de l'installation des dépendances Python:
+1. Le fichier `requirements.txt` contient uniquement les dépendances essentielles
+2. Les dépendances optionnelles (soda-core, streamlit, etc.) sont dans `requirements-optional.txt`
+3. Vous pouvez les installer après le démarrage du container avec le script fourni
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+### CI/CD
+- Workflow GitHub Actions : build Docker, tests unitaires et intégration, vérification DAGs.
+
+### Validation qualité
+- Soda Core vérifie row_count, cohérence et format des données
+- Rapports automatiques disponibles dans les logs
+
+### Bonus
+- Dashboard Streamlit pour visualisation des vues, likes et commentaires
+- Support multi-chaînes YouTube
+
+## 📂 Structure du projet
+```
+youtube-elt-pipeline/
+├─ dags/
+│  ├─ produce_json.py
+│  ├─ update_db.py
+│  └─ data_quality.py
+├─ modules/
+│  └─ utils.py
+├─ tests/
+│  └─ test_pipeline.py
+├─ docker/
+│  └─ Dockerfile
+├─ .github/workflows/ci.yml
+└─ README.md
+```
+
+## ✅ Livrables
+- Pipeline ELT opérationnel avec DAGs et validation qualité
+- Dépôt GitHub structuré et documenté
+- Captures d’écran Airflow, PostgreSQL et Soda Core
+- (Bonus) Dashboard Streamlit et multi-chaînes YouTube
+
+## 📚 Références utiles
+- [YouTube Data API v3](https://developers.google.com/youtube/v3/docs)
+- [Apache Airflow Docs](https://airflow.apache.org/docs/)
+- [Astro CLI Docs](https://www.astronomer.io/docs/astro/cli/overview)
+- [Soda Core Docs](https://docs.soda.io/soda-core/getting-started.html)
+- [Docker Docs](https://docs.docker.com/get-started/)
+- [Streamlit Docs](https://docs.streamlit.io/)
+
