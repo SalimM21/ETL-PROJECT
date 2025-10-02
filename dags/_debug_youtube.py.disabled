@@ -1,0 +1,42 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.models import Variable
+from airflow.exceptions import AirflowException
+from datetime import datetime
+import requests
+
+def check_youtube():
+    api_key = Variable.get("YOUTUBE_API_KEY", default_var=None)
+    chan = Variable.get("CHANNEL_ID", default_var="UCX6OQ3DkcsbYNE6H8uQQuVA")  # MrBeast
+    if not api_key:
+        raise AirflowException("Missing Airflow Variable YOUTUBE_API_KEY")
+
+    # 1) Simple "videos" call on a public video (Rick Astley)
+    r1 = requests.get(
+        "https://www.googleapis.com/youtube/v3/videos",
+        params={"part":"id","id":"dQw4w9WgXcQ","key":api_key},
+        timeout=20
+    )
+    print("videos status:", r1.status_code)
+    print("videos body:", r1.text[:400])
+
+    # 2) Search on the target channel (1 page only)
+    r2 = requests.get(
+        "https://www.googleapis.com/youtube/v3/search",
+        params={"part":"id","channelId":chan,"type":"video","order":"date","maxResults":5,"key":api_key},
+        timeout=20
+    )
+    print("search status:", r2.status_code)
+    print("search body:", r2.text[:400])
+
+    if r1.status_code != 200 or r2.status_code != 200:
+        raise AirflowException("YouTube API returned non-200. See logs above for exact error JSON.")
+
+with DAG(
+    dag_id="_debug_youtube",
+    start_date=datetime(2025,9,15),
+    schedule=None,
+    catchup=False,
+    tags=["debug","youtube"],
+):
+    PythonOperator(task_id="check", python_callable=check_youtube)

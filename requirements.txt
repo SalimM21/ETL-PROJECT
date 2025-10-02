@@ -1,0 +1,5 @@
+soda-core
+soda-core-postgres
+requests
+isodate
+psycopg2-binary

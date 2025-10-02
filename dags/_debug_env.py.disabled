@@ -1,0 +1,33 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.models import Variable
+from datetime import datetime
+import importlib, socket, requests  # if this import fails -> missing packages
+
+def check_env():
+    # Check Variables
+    key = Variable.get("YOUTUBE_API_KEY", default_var=None)
+    chan = Variable.get("CHANNEL_ID", default_var=None)
+    print(f"YOUTUBE_API_KEY set? {'YES' if key else 'NO'}")
+    print(f"CHANNEL_ID: {chan}")
+
+    # Check modules
+    for m in ["requests", "isodate", "psycopg2"]:
+        try:
+            importlib.import_module(m)
+            print(f"module {m}: OK")
+        except Exception as e:
+            print(f"module {m}: MISSING -> {e}")
+
+    # Check simple internet reachability
+    r = requests.get("https://www.googleapis.com/discovery/v1/apis", timeout=10)
+    print("HTTP to googleapis:", r.status_code)
+
+with DAG(
+    dag_id="_debug_env",
+    start_date=datetime(2025,9,15),
+    schedule=None,
+    catchup=False,
+    tags=["debug"],
+):
+    PythonOperator(task_id="check", python_callable=check_env)

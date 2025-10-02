@@ -1,0 +1,11 @@
+# Configuration Soda pour PostgreSQL
+# Variables d'environnement pour la connexion
+
+data_source pg_datasource:
+  type: postgres
+  username: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  host: ${POSTGRES_HOST}
+  port: ${POSTGRES_PORT}
+  database: ${POSTGRES_DB}
+  schema: public

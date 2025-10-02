@@ -1,0 +1,507 @@
+{
+  "channel_handle": "MrBeast",
+  "extraction_date": "2025-10-01T10:17:03.975475+00:00",
+  "total_videos": 50,
+  "videos": [
+    {
+      "title": "Would You Risk Dying For $500,000?",
+      "duration": "PT25M26S",
+      "duration_readable": "25:26",
+      "video_id": "zo7i8VTpfNM",
+      "view_count": 56902281,
+      "like_count": 1626100,
+      "comment_count": 23162,
+      "published_at": "2025-09-27T16:00:04Z"
+    },
+    {
+      "title": "Would Your Grandma Go Skydiving?",
+      "duration": "PT42S",
+      "duration_readable": "0:42",
+      "video_id": "NfhuGUyWYfQ",
+      "view_count": 54444498,
+      "like_count": 1716931,
+      "comment_count": 5399,
+      "published_at": "2025-09-26T18:00:07Z"
+    },
+    {
+      "title": "I Cooked A Pizza With Power Tools",
+      "duration": "PT40S",
+      "duration_readable": "0:40",
+      "video_id": "wIpWCJKfRXs",
+      "view_count": 162155039,
+      "like_count": 3898368,
+      "comment_count": 13524,
+      "published_at": "2025-09-23T16:00:07Z"
+    },
+    {
+      "title": "Survive 100 Days In Prison, Win $500,000",
+      "duration": "PT39M36S",
+      "duration_readable": "39:36",
+      "video_id": "TDv56whosPQ",
+      "view_count": 114318213,
+      "like_count": 2810646,
+      "comment_count": 39520,
+      "published_at": "2025-08-16T19:00:02Z"
+    },
+    {
+      "title": "Every YouTube Play Button I Have",
+      "duration": "PT15S",
+      "duration_readable": "0:15",
+      "video_id": "R_BmT1OJw98",
+      "view_count": 72836439,
+      "like_count": 1885165,
+      "comment_count": 11803,
+      "published_at": "2025-08-15T16:00:01Z"
+    },
+    {
+      "title": "$1 vs $25,000 VFX",
+      "duration": "PT23S",
+      "duration_readable": "0:23",
+      "video_id": "V6In4tmd-w8",
+      "view_count": 84600211,
+      "like_count": 2162843,
+      "comment_count": 12005,
+      "published_at": "2025-06-19T17:00:41Z"
+    },
+    {
+      "title": "Extreme Helmet Game",
+      "duration": "PT32S",
+      "duration_readable": "0:32",
+      "video_id": "c2ukL_zjFCk",
+      "view_count": 172528808,
+      "like_count": 3265336,
+      "comment_count": 6826,
+      "published_at": "2025-05-28T16:00:19Z"
+    },
+    {
+      "title": "Beat Neymar, Win $500,000",
+      "duration": "PT27M53S",
+      "duration_readable": "27:53",
+      "video_id": "DZIASl9q90s",
+      "view_count": 153503538,
+      "like_count": 3506219,
+      "comment_count": 80733,
+      "published_at": "2025-05-24T16:00:01Z"
+    },
+    {
+      "title": "Subscribe to Win $50,000",
+      "duration": "PT15S",
+      "duration_readable": "0:15",
+      "video_id": "0yPgljFcTR4",
+      "view_count": 67920661,
+      "like_count": 3966576,
+      "comment_count": 142630,
+      "published_at": "2025-05-07T16:00:01Z"
+    },
+    {
+      "title": "Extreme Helmet Game",
+      "duration": "PT23S",
+      "duration_readable": "0:23",
+      "video_id": "M1STzb7k9L8",
+      "view_count": 202212086,
+      "like_count": 2205566,
+      "comment_count": 5052,
+      "published_at": "2025-04-25T16:15:00Z"
+    },
+    {
+      "title": "Drift This Car, Win $10,000",
+      "duration": "PT20S",
+      "duration_readable": "0:20",
+      "video_id": "Tbn4cYCaZCk",
+      "view_count": 462677840,
+      "like_count": 6257052,
+      "comment_count": 10220,
+      "published_at": "2025-04-16T17:00:15Z"
+    },
+    {
+      "title": "Last to Leave Their Circle Wins $500,000",
+      "duration": "PT38M38S",
+      "duration_readable": "38:38",
+      "video_id": "zajUgQLviwk",
+      "view_count": 189874139,
+      "like_count": 3050719,
+      "comment_count": 83491,
+      "published_at": "2025-03-01T17:00:01Z"
+    },
+    {
+      "title": "Reach the Money, Win $10,000",
+      "duration": "PT25S",
+      "duration_readable": "0:25",
+      "video_id": "nAiKLoCP-kU",
+      "view_count": 466667379,
+      "like_count": 7465241,
+      "comment_count": 8958,
+      "published_at": "2025-02-14T18:15:00Z"
+    },
+    {
+      "title": "I Spent 100 Hours Inside The Pyramids!",
+      "duration": "PT21M43S",
+      "duration_readable": "21:43",
+      "video_id": "NDsO1LT_0lw",
+      "view_count": 218334094,
+      "like_count": 5325133,
+      "comment_count": 100857,
+      "published_at": "2025-02-08T17:00:00Z"
+    },
+    {
+      "title": "I Helped 2,000 People Walk Again",
+      "duration": "PT15M31S",
+      "duration_readable": "15:31",
+      "video_id": "SM66GDRyIVY",
+      "view_count": 121528554,
+      "like_count": 2946061,
+      "comment_count": 54742,
+      "published_at": "2025-01-11T17:00:02Z"
+    },
+    {
+      "title": "This obstacle course is WILD",
+      "duration": "PT32S",
+      "duration_readable": "0:32",
+      "video_id": "EvqtfK_RaRg",
+      "view_count": 202208254,
+      "like_count": 3831650,
+      "comment_count": 5336,
+      "published_at": "2025-01-10T17:00:00Z"
+    },
+    {
+      "title": "2,000 People Fight For $5,000,000",
+      "duration": "PT24M45S",
+      "duration_readable": "24:45",
+      "video_id": "gs8qfL9PNac",
+      "view_count": 183477149,
+      "like_count": 4565781,
+      "comment_count": 50417,
+      "published_at": "2024-12-19T17:00:00Z"
+    },
+    {
+      "title": "$1 vs $500,000 Experiences!",
+      "duration": "PT17M40S",
+      "duration_readable": "17:40",
+      "video_id": "Xj0Jtjg3lHQ",
+      "view_count": 264672553,
+      "like_count": 5098453,
+      "comment_count": 56381,
+      "published_at": "2024-11-02T16:00:00Z"
+    },
+    {
+      "title": "7 Days Exploring An Underground City",
+      "duration": "PT20M35S",
+      "duration_readable": "20:35",
+      "video_id": "bn0Kh9c4Zv4",
+      "view_count": 162957711,
+      "like_count": 3658125,
+      "comment_count": 32971,
+      "published_at": "2024-10-12T16:00:00Z"
+    },
+    {
+      "title": "Holding Bigger And Bigger Dogs",
+      "duration": "PT17S",
+      "duration_readable": "0:17",
+      "video_id": "8krJy31Diow",
+      "view_count": 308575045,
+      "like_count": 7917504,
+      "comment_count": 9693,
+      "published_at": "2024-09-16T18:00:00Z"
+    },
+    {
+      "title": "Real Or Cake For $10,000",
+      "duration": "PT37S",
+      "duration_readable": "0:37",
+      "video_id": "QtD-CeUdRUQ",
+      "view_count": 229395592,
+      "like_count": 7684694,
+      "comment_count": 17650,
+      "published_at": "2024-08-29T16:00:00Z"
+    },
+    {
+      "title": "$10,000 Every Day You Survive In The Wilderness",
+      "duration": "PT26M10S",
+      "duration_readable": "26:10",
+      "video_id": "U_LlX4t0A9I",
+      "view_count": 313476914,
+      "like_count": 8526464,
+      "comment_count": 332932,
+      "published_at": "2024-06-01T16:00:00Z"
+    },
+    {
+      "title": "Buy Feastables, Win Unlimited Money",
+      "duration": "PT51S",
+      "duration_readable": "0:51",
+      "video_id": "snUyLbGx6U4",
+      "view_count": 382095831,
+      "like_count": 12289865,
+      "comment_count": 27430,
+      "published_at": "2024-04-30T16:00:00Z"
+    },
+    {
+      "title": "In 10 Minutes This Room Will Explode!",
+      "duration": "PT10M",
+      "duration_readable": "10:00",
+      "video_id": "Pv0iVoSZzN8",
+      "view_count": 161051851,
+      "like_count": 4155193,
+      "comment_count": 77621,
+      "published_at": "2024-04-27T16:00:00Z"
+    },
+    {
+      "title": "Protect $500,000 Keep It!",
+      "duration": "PT15M34S",
+      "duration_readable": "15:34",
+      "video_id": "7ESeQBeikKs",
+      "view_count": 184019656,
+      "like_count": 4763348,
+      "comment_count": 70274,
+      "published_at": "2024-01-13T17:00:00Z"
+    },
+    {
+      "title": "$10,000 Every Day You Survive In A Grocery Store",
+      "duration": "PT21M32S",
+      "duration_readable": "21:32",
+      "video_id": "tnTPaLOaHz8",
+      "view_count": 457093932,
+      "like_count": 7238630,
+      "comment_count": 84725,
+      "published_at": "2023-12-02T17:00:00Z"
+    },
+    {
+      "title": "I Spent 7 Days Buried Alive",
+      "duration": "PT18M34S",
+      "duration_readable": "18:34",
+      "video_id": "7dYTw-jAYkY",
+      "view_count": 275286845,
+      "like_count": 7806949,
+      "comment_count": 117087,
+      "published_at": "2023-11-18T17:00:01Z"
+    },
+    {
+      "title": "$100,000,000 Bathroom",
+      "duration": "PT50S",
+      "duration_readable": "0:50",
+      "video_id": "c0v8OPItCOg",
+      "view_count": 343123704,
+      "like_count": 12488895,
+      "comment_count": 22457,
+      "published_at": "2023-10-17T17:00:00Z"
+    },
+    {
+      "title": "World's Most Dangerous Trap!",
+      "duration": "PT19M34S",
+      "duration_readable": "19:34",
+      "video_id": "3OFj6l2tQ9s",
+      "view_count": 319846160,
+      "like_count": 6659891,
+      "comment_count": 149615,
+      "published_at": "2023-10-07T16:00:00Z"
+    },
+    {
+      "title": "Katana Vs Bullet",
+      "duration": "PT41S",
+      "duration_readable": "0:41",
+      "video_id": "L5kIXRdwGAI",
+      "view_count": 1081837818,
+      "like_count": 37552566,
+      "comment_count": 50971,
+      "published_at": "2023-09-07T17:00:01Z"
+    },
+    {
+      "title": "How Many School Buses Can We Stack?",
+      "duration": "PT45S",
+      "duration_readable": "0:45",
+      "video_id": "19NmWqv4Alk",
+      "view_count": 489090436,
+      "like_count": 15422733,
+      "comment_count": 28592,
+      "published_at": "2023-09-05T16:59:57Z"
+    },
+    {
+      "title": "7 Days Stranded At Sea",
+      "duration": "PT18M5S",
+      "duration_readable": "18:05",
+      "video_id": "yhB3BgJyGl8",
+      "view_count": 391272693,
+      "like_count": 8164400,
+      "comment_count": 125641,
+      "published_at": "2023-08-05T16:00:01Z"
+    },
+    {
+      "title": "Do Pawnshops Scam You?",
+      "duration": "PT33S",
+      "duration_readable": "0:33",
+      "video_id": "ooAwCOP67GQ",
+      "view_count": 405965755,
+      "like_count": 16214775,
+      "comment_count": 24925,
+      "published_at": "2023-06-03T16:59:57Z"
+    },
+    {
+      "title": "I Paid A Real Assassin To Try To Kill Me",
+      "duration": "PT12M17S",
+      "duration_readable": "12:17",
+      "video_id": "YLt73w6criQ",
+      "view_count": 319725080,
+      "like_count": 6371329,
+      "comment_count": 104312,
+      "published_at": "2023-03-18T20:00:01Z"
+    },
+    {
+      "title": "Do Men Lie About Their Height?",
+      "duration": "PT47S",
+      "duration_readable": "0:47",
+      "video_id": "lglIQkCHO0g",
+      "view_count": 540682168,
+      "like_count": 21311156,
+      "comment_count": 28380,
+      "published_at": "2023-02-14T21:00:14Z"
+    },
+    {
+      "title": "I Survived 50 Hours In Antarctica",
+      "duration": "PT12M10S",
+      "duration_readable": "12:10",
+      "video_id": "7IKab3HcfFk",
+      "view_count": 244471183,
+      "like_count": 5772138,
+      "comment_count": 142627,
+      "published_at": "2022-12-24T20:59:59Z"
+    },
+    {
+      "title": "Hydraulic Press Vs Lamborghini",
+      "duration": "PT10M25S",
+      "duration_readable": "10:25",
+      "video_id": "h5NvTTOlOtI",
+      "view_count": 260648648,
+      "like_count": 5780002,
+      "comment_count": 124538,
+      "published_at": "2022-12-10T21:00:01Z"
+    },
+    {
+      "title": "Would You Fly To Paris For A Baguette?",
+      "duration": "PT48S",
+      "duration_readable": "0:48",
+      "video_id": "se50viFJ0AQ",
+      "view_count": 1622312281,
+      "like_count": 56972372,
+      "comment_count": 119468,
+      "published_at": "2022-12-08T20:12:27Z"
+    },
+    {
+      "title": "11 YouTubers Fight For Private Jet!",
+      "duration": "PT15M37S",
+      "duration_readable": "15:37",
+      "video_id": "kX3nB4PpJko",
+      "view_count": 240058981,
+      "like_count": 4916614,
+      "comment_count": 100029,
+      "published_at": "2022-11-12T21:00:00Z"
+    },
+    {
+      "title": "Giving iPhones Instead Of Candy on Halloween",
+      "duration": "PT40S",
+      "duration_readable": "0:40",
+      "video_id": "YlvcFJOE-OE",
+      "view_count": 1569921255,
+      "like_count": 40432439,
+      "comment_count": 138114,
+      "published_at": "2022-11-02T21:00:01Z"
+    },
+    {
+      "title": "100 Boys Vs 100 Girls For $500,000",
+      "duration": "PT16M53S",
+      "duration_readable": "16:53",
+      "video_id": "tVWWp1PqDus",
+      "view_count": 279296486,
+      "like_count": 4983485,
+      "comment_count": 136712,
+      "published_at": "2022-07-23T20:00:09Z"
+    },
+    {
+      "title": "I Didn’t Eat Food For 30 Days",
+      "duration": "PT13M4S",
+      "duration_readable": "13:04",
+      "video_id": "vaIgyRoUkQI",
+      "view_count": 125013188,
+      "like_count": 4271245,
+      "comment_count": 105937,
+      "published_at": "2022-07-02T20:00:02Z"
+    },
+    {
+      "title": "I Built Willy Wonka's Chocolate Factory!",
+      "duration": "PT16M11S",
+      "duration_readable": "16:11",
+      "video_id": "Hwybp38GnZw",
+      "view_count": 359796914,
+      "like_count": 6900033,
+      "comment_count": 156004,
+      "published_at": "2022-06-04T20:00:02Z"
+    },
+    {
+      "title": "Last To Leave Circle Wins $500,000",
+      "duration": "PT17M44S",
+      "duration_readable": "17:44",
+      "video_id": "zxYjTTXc-J8",
+      "view_count": 535007688,
+      "like_count": 7774807,
+      "comment_count": 127800,
+      "published_at": "2021-08-31T20:01:03Z"
+    },
+    {
+      "title": "If You Can Carry $1,000,000 You Keep It!",
+      "duration": "PT10M7S",
+      "duration_readable": "10:07",
+      "video_id": "ktyJIj6i4Qw",
+      "view_count": 253278460,
+      "like_count": 3915605,
+      "comment_count": 78394,
+      "published_at": "2021-07-24T20:00:59Z"
+    },
+    {
+      "title": "I Survived 50 Hours In A Maximum Security Prison",
+      "duration": "PT12M34S",
+      "duration_readable": "12:34",
+      "video_id": "nM89Wl03Q4g",
+      "view_count": 290029718,
+      "like_count": 4435198,
+      "comment_count": 98690,
+      "published_at": "2021-06-26T20:00:02Z"
+    },
+    {
+      "title": "I Got Hunted By A Real Bounty Hunter",
+      "duration": "PT13M28S",
+      "duration_readable": "13:28",
+      "video_id": "TQHEJj68Jew",
+      "view_count": 233135938,
+      "like_count": 4358275,
+      "comment_count": 120234,
+      "published_at": "2021-04-24T20:00:00Z"
+    },
+    {
+      "title": "Extreme $100,000 Game of Tag!",
+      "duration": "PT16M39S",
+      "duration_readable": "16:39",
+      "video_id": "WcwGleN38zE",
+      "view_count": 265622025,
+      "like_count": 3989763,
+      "comment_count": 116377,
+      "published_at": "2021-04-17T20:00:00Z"
+    },
+    {
+      "title": "Would You Sit In Snakes For $10,000?",
+      "duration": "PT14M7S",
+      "duration_readable": "14:07",
+      "video_id": "fMfipiV_17o",
+      "view_count": 370150394,
+      "like_count": 5743093,
+      "comment_count": 139782,
+      "published_at": "2021-04-10T21:00:07Z"
+    },
+    {
+      "title": "I Spent 50 Hours Buried Alive",
+      "duration": "PT12M40S",
+      "duration_readable": "12:40",
+      "video_id": "9bqk6ZUsKyA",
+      "view_count": 336211341,
+      "like_count": 8343322,
+      "comment_count": 243006,
+      "published_at": "2021-03-27T20:00:04Z"
+    }
+  ]
+}

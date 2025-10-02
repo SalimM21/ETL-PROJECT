@@ -1,0 +1,36 @@
+# Validate core metrics (business-facing)
+checks for core.fact_video_metrics:
+  # 1) we loaded *something*
+  - row_count > 0
+
+  # 2) required columns exist
+  - schema:
+      fail:
+        when required column missing:
+          - captured_at
+          - video_id
+          - view_count
+          - duration_seconds
+
+  # 3) key fields must be present and sane
+  - missing_count(video_id) = 0
+  - invalid_count(view_count) = 0:
+      valid min: 0
+  - invalid_count(duration_seconds) = 0:
+      valid min: 1
+
+  # 4) latest snapshot should be recent (freshness SLA)
+  - freshness(captured_at) < 36h
+
+# Validate staging shape (technical guardrails)
+checks for staging.videos_flat:
+  - schema:
+      warn:
+        when required column missing:
+          - captured_at
+          - video_id
+          - published_at
+          - duration_iso
+  - duplicate_count(video_id) = 0:
+      filter: captured_at = (select max(captured_at) from staging.videos_flat)
+  - missing_count(published_at) < 5  # allow a few odd cases

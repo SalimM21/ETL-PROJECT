@@ -1,0 +1,25 @@
+from airflow import DAG
+from airflow.operators.bash import BashOperator
+from datetime import datetime
+
+with DAG(
+    dag_id="_debug_soda",
+    start_date=datetime(2025, 9, 15),
+    schedule=None,
+    catchup=False,
+    tags=["debug", "soda"],
+):
+    # print where soda is, its version, and list the config/checks
+    env = BashOperator(
+        task_id="env",
+        bash_command=(
+            "echo 'PATH: ' $PATH && "
+            "which soda || true && "
+            "soda --version || true && "
+            "ls -la /usr/local/airflow/soda || true && "
+            "echo '--- file content: configuration.yml ---' && "
+            "sed -n '1,120p' /usr/local/airflow/soda/configuration.yml || true && "
+            "echo '--- file content: checks.yml ---' && "
+            "sed -n '1,200p' /usr/local/airflow/soda/checks.yml || true"
+        ),
+    )
