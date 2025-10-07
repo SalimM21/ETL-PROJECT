@@ -1,5 +1,8 @@
 # YouTube ELT Pipeline – Projet V4
 
+## 🎯 Contexte
+De nombreuses entreprises du secteur digital souhaitent automatiser l'analyse des performances de contenu YouTube pour optimiser leurs stratégies marketing et comprendre les tendances du marché.  
+Ce projet a pour objectif de concevoir un **pipeline ELT complet** permettant d’extraire, transformer, charger et valider les données YouTube automatiquement.
 
 ## 👩‍💻 User Stories
 - **Data Engineer** : Orchestrer l'extraction quotidienne des données YouTube via des DAGs Airflow.
